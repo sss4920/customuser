@@ -1,0 +1,94 @@
+{% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>개발자들</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/dogdevelop.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'css/Main.css'%}">
+
+    <script type="text/javascript" src="{% static 'js/Main.js' %}"></script>
+
+    <!--  Main.html  // 메인 화면
+
+    intro1~n 하나의 정보 블럭?
+
+    -->
+  </head>
+  <body id="wrap">
+
+
+
+    <section id="main">
+      <div class="intro1">
+        <div class="intro1Content">
+          <img src="{% static 'img/개들홈페이지.png' %}" alt="">
+        </div>
+      </div>
+
+      <div class="intro2">
+        <br><br><br><br><br><br>
+        <span class="intro2H">개발자들 강의 자료</span><br><br>
+        <span class="intro2SH">동아리 모임 때 진행했던 강의 자료 및 참고자료를 확인할 수 있습니다.</span><br><br><br>
+
+        <div class="lecture">
+          <a class="lecture1" target="_blank" href="https://www.notion.so/Python-5cf6d6da3f1e4195b8d2b4be6736ce22">
+            <div class="lect1">
+              <img class="lectImg" src="{% static 'img/파이썬.png' %}" alt=""><br><br><br><span>개발자들을 위한<br>파이썬 강의</span><br><br>이한길 제작<br><br><br>
+            </div>
+          </a>
+
+          <a class="lecture2" href="#">
+            <div class="lect2">
+              <img class="lectImg" src="{% static 'img/c언어.png' %}" alt=""><br><br><br><span>개발자들을 위한<br>C언어 강의</span><br><br>제작 중<br><br><br>
+            </div>
+          </a>
+
+          <a class="lecture3" href="#">
+            <div class="lect3">
+              <img class="lectImg" src="{% static 'img/html.png' %}" alt=""><br><br><br><span>개발자들을 위한<br>웹 개발 강의</span><br><br>제작 중<br><br><br>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="intro3">
+        <br>
+        홈페이지 기능 소개 <br><br>
+        개발자들 강의 자료를 열람할 수 있다.<br><br>
+        개발자들의 공지사항을 쉽게 볼 수 있다.<br>------미완성--------
+      </div>
+
+      <div class="intro4">
+        <br><br><br>
+        워다타 소개 (광고 배너 처럼 무엇을 알리기 위해)<br><br><br>
+        <b>2019 성공회대학교 창업경진대회 최우수상</b><br>------미완성--------<br><br><br><br>
+        <img src="{% static 'img/워다타.jpg' %}" alt="">
+      </div>
+
+
+
+      <div class="introfooter">
+        <footer id="footer">
+          <fieldset class="infoForm">
+            <a href="#">이용약관</a>
+            <span class="bar">|</span>
+            <a href="#"><strong>개인정보처리방침</strong></a>
+            <span class="bar">|</span>
+            <a href="#">고객센터</a>
+          </fieldset>
+
+          <div class="copyright">
+            Copyright © SKHU <span>DogDevelop-Fish-bread-Team.</span> All right Reserved.
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </body>
+
+</html>

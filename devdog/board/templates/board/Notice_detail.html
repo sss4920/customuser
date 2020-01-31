@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>개발자들 공지</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/dogdevelop.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'css/Notice_detail.css' %}">
+
+    <script type="text/javascript" src="{% static 'js/Notice_detail.js' %}"></script>
+  </head>
+  <body>
+    <!--  접근 시 필요한 클래스 명
+
+    ntcTitle 공지사항 제목
+    ntcInfo 공지글의 정보 >>> ntcNick 작성자, ntcDate 작성일자
+    ntcText 공지사항 글(내용)
+
+    BackText 이전글
+    NextText 다음글
+
+    cb1_1~3 콘텐츠 사이드 배너
+
+    intro1~n 하나의 정보 블럭?
+
+    -->
+
+    <header id="header">
+      <nav id="banner">
+        <h1><a href="../main/Main.html">개발자들</a></h1>
+        <div class="bannerMenu">
+          <ul class="menu">
+            <li><a href="../notice/Notice.html"><b>공지</b></a></li>
+            <li><a href="#"><b>소개</b></a></li>
+            <li><a href="#"><b>QnA</b></a></li>
+            <li><a href="#"><b>Slack</b></a></li>
+          </ul>
+        </div>
+
+        <div class="sign">
+          <ul class="signMenu">
+            <li><a target="_blank" href="../signin/sign_in.html"><b>로그인</b></a></li>
+            <li><a target="_blank" href="../signup/sign_up.html"><b>가입하기</b></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="main">
+      <div class="intro1">
+        <div class="ad">
+          <img src="{% static 'img/adimg.png' %}" alt="">
+        </div>
+      </div>
+
+      <div class="intro2">
+        <div class="content">
+          <h1 class="contentTitle">공지사항 <span><a class="goNtcList" href="{% url 'board:read' %}">목록</a></span></h1>
+
+          <p class="ntcTitle"><span>{{ article.title }}</span></p>
+
+          <p class="ntcInfo"><span class="ntcNick">{{article.user_id}}</span><span class="ntcDate">2020-01-18</span></p>
+
+          <div class="ntc">
+            <div class="ntcText">
+              {{ article.content }}
+            </div>
+          
+          <div class="ntc">
+            <form method="POST">
+              {% csrf_token %}
+              <table>
+                  {{form.as_table}}
+              </table>
+              <input type="submit" value="댓글달기">
+          </form>
+            {% for comment in article.comments.all %}
+            {{ comment.content_c }}
+            {% endfor %}
+          </div>
+          
+
+            <div class="ntcBack">
+              <div class="BackText">
+                이전글 - 이전글이 없습니다.
+              </div>
+            </div>
+
+            <div class="ntcNext">
+              <div class="NextText">
+                <a href="#">다음글</a> - <a href="#">개발자들 8차 정기모임 공지</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contentBanner">
+
+          <div class="cb1">
+            <div class="cb1Img">
+              <ul>
+                <li class="cb1_1"><a target="_blank" href="https://www.notion.so/Python-5cf6d6da3f1e4195b8d2b4be6736ce22"><img src="{% static 'img/파이썬.png' %}" alt=""></a>파이썬 강의 자료</li>
+              </ul>
+            </div>
+            <button class="cbLeft" onclick="contentBannerLeft()"><</button><button class="cbRight" onclick="contentBannerRight()">></button>
+          </div>
+
+          <div class="cb2">
+            개발자들 알림
+          </div>
+        </div>
+
+      </div>
+
+      <div class="intro3">
+
+      </div>
+<br>
+<br>
+      <div class="intro4">
+        <div class="introfooter">
+          <footer id="footer">
+            <fieldset class="infoForm">
+              <a href="#">이용약관</a>
+              <span class="bar">|</span>
+              <a href="#"><strong>개인정보처리방침</strong></a>
+              <span class="bar">|</span>
+              <a href="#">고객센터</a>
+            </fieldset>
+
+            <div class="copyright">
+              Copyright © SKHU <span>DogDevelop-Fish-bread-Team.</span> All right Reserved.
+            </div>
+          </footer>
+        </div>
+      </div>
+
+
+    </section>
+
+
+  </body>
+</html>

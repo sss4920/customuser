@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>개발자들 : 회원가입</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/dogdevelop.jpg' %}">
+
+    <link rel="stylesheet" href="{% static 'css/sign_up.css' %}">
+
+    <script type="text/javascript" src="{% static 'js/sign_up.js' %}"></script>
+
+    <!--
+
+    id 아이디 입력 박스
+    pw 비밀번호 입력 박스
+    repw 비밀번호 재입력 박스
+    name 이름 입력 박스
+    _class 학번 입력 박스
+
+
+  -->
+  </head>
+  <body id="wrap">
+    <header id="logo">
+      <h1 class="logo"><a href="../main/Main.html">개발자들</a></h1>
+    </header>
+
+    
+      <form  action="" method="POST">
+        {% csrf_token %}
+        
+          {{ form.as_p }}
+        
+          <input class="signupBtn" type="submit" name="" value="가입하기" onclick="inputTF()">
+      </form>
+    
+
+    <footer id="footer">
+      <fieldset class="infoForm">
+        <a href="#">이용약관</a>
+        <span class="bar">|</span>
+        <a href="#"><strong>개인정보처리방침</strong></a>
+        <span class="bar">|</span>
+        <a href="#">고객센터</a>
+      </fieldset>
+
+      <div class="copyright">
+        Copyright © SKHU <span>DogDevelop-Fish-bread-Team.</span> All right Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

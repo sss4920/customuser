@@ -1,0 +1,217 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f5f6f7;
+}
+
+#banner > h1 > a {
+  color: rgb(285,165,122);
+  text-decoration: none;
+}
+
+#header {
+  width: 100%-100px;
+  height: 90px;
+  text-align: center;
+  padding-left: 100px;
+  background-color: white;
+}
+
+#banner {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+#banner > h1 {
+  line-height: 50px;
+  color: rgb(285,165,122);
+  float: left;
+}
+
+.menu {
+  float: left;
+}
+
+.menu > li {
+  list-style: none;
+  float: left;
+}
+
+.menu > li > a {
+  text-decoration: none;
+  line-height: 60px;
+  margin-right: 30px;
+  color: black;
+  display: block;
+}
+
+.sign {
+  float: right;
+}
+
+.signMenu > li {
+  list-style: none;
+  float: left;
+}
+
+.signMenu > li > a {
+  text-decoration: none;
+  line-height: 60px;
+  margin-right: 30px;
+  color: black;
+  display: block;
+  float: left;
+}
+
+#main {
+  width: 100%;
+  text-align: center;
+}
+
+.intro1 {
+  background-color: rgb(285,165,122);
+  height: 760px;
+  margin: 0 300 0 300px;
+}
+
+.intro1Content > img {
+  padding: 0 20px;
+}
+
+.intro2 {
+  background-color: #f5f6f7;
+  height: 840px;
+}
+
+.intro2H {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.intro2SH {
+  font-size: 18px;
+}
+
+.lecture {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.lecture > a {
+  text-decoration: none;
+  color: black;
+}
+
+.lecture1 {
+  transition: all ease 1s;
+}
+
+.lecture1:hover {
+  transform: scale(1.1);
+}
+
+.lect1 {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.lect1 > span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lectImg {
+  position: relative;
+  width: 270px;
+  height: 280px;
+  top: 15px;
+}
+
+.lecture2 {
+  transition: all ease 1s;
+}
+
+.lecture2:hover {
+  transform: scale(1.1);
+}
+
+.lect2 {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.lect2 > span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lecture3 {
+  transition: all ease 1s;
+}
+
+.lecture3:hover {
+  transform: scale(1.1);
+}
+
+.lect3 {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.lect3 > span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.intro3 {
+  background-color: rgb(285,165,122);
+  height: 760px;
+}
+
+.intro4 {
+  background-color: white;
+  height: 760px;
+}
+
+.introfooter {
+  background-color: white;
+  height: 114px;
+}
+
+#footer {
+  text-align: center;
+}
+
+#footer > div {
+  font-size: 13px;
+}
+
+#footer > div > span {
+  font-weight: bold;
+}
+
+.infoForm {
+  width: 452px;
+  border: 0;
+  margin: auto;
+}
+
+.infoForm > a {
+  display: inline-block;
+  height: 0px;
+  margin: 60px 6px 0px 6px;
+  text-decoration: none;
+  color: #6e6e6e;
+  cursor: pointer;
+}
