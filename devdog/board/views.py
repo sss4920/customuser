@@ -31,12 +31,11 @@ def detail(request,article_id):
     article = get_object_or_404(Article, id=article_id)
     user = CustomUser.objects
     if request.user.is_authenticated:
-        author = request.user.username
         if request.method=='POST':
             form = CommentForm(request.POST)
             if form.is_valid():
                 comment = form.save(commit=False)
-                comment.author = author
+                comment.author = request.user
                 comment.text = form.cleaned_data["text"]
                 comment.save()
                 return redirect("board:detail", article_id)

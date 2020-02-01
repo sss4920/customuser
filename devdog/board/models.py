@@ -12,7 +12,7 @@ class Article(models.Model):
         
 
 class Comment(models.Model):
-    article_id = models.ForeignKey(Article, on_delete=models.CASCADE, related_name="comments")
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True)
     text = models.TextField()
     def __str__(self):
